@@ -26,13 +26,11 @@ public class Main {
                 new Student("Hà", 3)
         );
 
-        // Bài 1: Tìm học sinh điểm cao nhất
         System.out.println("Bài 1");
         students.stream()
                 .max(Comparator.comparingInt(s -> s.score))
                 .ifPresent(s -> System.out.println("Học sinh điểm cao nhất: " + s.name + " - " + s.score));
 
-        // Bài 2: Tính điểm trung bình hệ 10
         System.out.println("\n== Bài 2 ==");
         double avg = students.stream()
                 .mapToInt(s -> s.score)
